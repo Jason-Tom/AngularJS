@@ -4,27 +4,12 @@
 <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
+    <script type="text/javascript" src="myjs.js"></script>
 </head>
 
 <body>
     <div ng-app="myApp" runoob-directive1></div>
     <!-- 动用那个模块下面的那个自定义标签 -->
-    <script>
-    var app = angular.module("myApp", []);
-    	// 声明模块
-    app.directive("runoobDirective", function() {
-    	// 写模块方法
-        return {
-            template: "我在指令构造器中创建!"
-        };
-    });
-    app.directive("runoobDirective1", function() {
-    	// 写模块方法
-        return {
-            template: "我在指令构造器中创建1!"
-        };
-    });
-    </script>
 </body>
 
 </html>

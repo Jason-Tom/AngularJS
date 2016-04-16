@@ -1,17 +1,30 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>母板测试</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
 </head>
 
 <body>
-	<ul>
-		<li class="item1"><a href="http://www.w3cplus.com/tools/emmet-cheat-sheet.html">emmet</a></li>
-		<li class="item2"><a href="http://www.runoob.com/angularjs/angularjs-tutorial.html">augularjs</a></li>
-	</ul>
-	<!-- 列表来当导航栏，emmet高效率使用 -->
+    <div ng-app="myApp" runoob-directive1></div>
+    <!-- 动用那个模块下面的那个自定义标签 -->
+    <script>
+    var app = angular.module("myApp", []);
+    	// 声明模块
+    app.directive("runoobDirective", function() {
+    	// 写模块方法
+        return {
+            template: "我在指令构造器中创建!"
+        };
+    });
+    app.directive("runoobDirective1", function() {
+    	// 写模块方法
+        return {
+            template: "我在指令构造器中创建1!"
+        };
+    });
+    </script>
 </body>
 
 </html>

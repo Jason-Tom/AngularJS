@@ -8,7 +8,7 @@ myApp.controller('TextController', function($scope) {
 myApp.config(function($routeProvider) {
     // 配置路由，要放置$routeProvider来调用配置方法
     $routeProvider.
-    when('/aa:id', {
+    when('/aa', {
         controller: 'ListController',
         // 控制器名要和视图对应上才能调用
         templateUrl: 'list.html'

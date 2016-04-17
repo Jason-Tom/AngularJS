@@ -1,46 +1,34 @@
-﻿<!DOCTYPE html >
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>测试</title>
-    <script src="js/angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-</head>
-
-<body ng-app="myApp">
-    <div ng-controller="TextController">
-        <p>{{someText}}</p>
-    </div>
-    <div ng-view></div>
-</body>
-<script>
 var myApp = angular.module('myApp', ['ngRoute']);
+// 声明模块
 myApp.controller('TextController', function($scope) {
+    // 定义控制器，要写明控制域，最好不要使用全局变量
     $scope.someText = '测试显示内容';
 });
 
-//路由
-function emailRouteConfig($routeProvider) {
+myApp.config(function($routeProvider) {
+    // 配置路由，要放置$routeProvider来调用配置方法
     $routeProvider.
-    when('/', {
-        controller: ListController,
+    when('/aa', {
+        controller: 'ListController',
+        // 控制器名要和视图对应上才能调用
         templateUrl: 'list.html'
-    }).
-    when('/view/:id', { //在id前面加一个冒号，从而制订了一个参数化URL
-        controller: DetailController,
-        templateUrl: 'detail.html'
+        // 模板不用写完整，包含<html>
     }).
     otherwise({
         redirectTo: '/'
     });
-}
+});
 
-myApp.config(emailRouteConfig); //配置我们的路由
+myApp.controller('ListController', function($scope) {
+    $scope.messages = messages;
+});
+
+
 
 messages = [{
+    // javascript里面的全局变量定义方法
     id: 0,
-    sender: "123456@qq.com",
+    sender: "wwewww",
     subject: "你好，这是一封邮件",
     date: "2015年4月13日",
     recipients: ['wifei@163.com'],
@@ -60,14 +48,3 @@ messages = [{
     recipients: ['wifei@163.com'],
     message: "你好，我是xxx，这是发送给您的邮件。"
 }];
-
-function ListController($scope) {
-    $scope.messages = messages;
-}
-
-function DetailController($scope, $routeParams) {
-    $scope.message = messages[$routeParams.id];
-}
-</script>
-
-</html>

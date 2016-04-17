@@ -1,3 +1,15 @@
 <div ng-controller="test">
-	sdfasdf
+<table>
+    <tr>
+        <td><strong>发件人</strong></td>
+        <td><strong>内容</strong></td>
+        <td><strong>日期</strong></td>
+        sdfsdf
+    </tr>
+    <tr ng-repeat="message in messages">
+        <td>{{message.id}} : {{message.sender}}</td>
+        <td><a href="#/view/{{message.id}}">{{message.subject}}</a></td>
+        <td>{{message.date}}</td>
+    </tr>
+</table>
 </div>

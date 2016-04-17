@@ -13,7 +13,12 @@ myApp.config(function($routeProvider) {
         // 控制器名要和视图对应上才能调用
         templateUrl: 'list.html'
         // 模板不用写完整，包含<html>
-    }).
+    })
+    .when('/bb',{
+        controller:'test',
+        templateUrl:'mytest.html'
+    })
+    .
     otherwise({
         redirectTo: '/'
     });

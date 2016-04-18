@@ -11,7 +11,13 @@
         <br> Address: <span id="jstreet"></span>
         <br> Phone: <span id="jphone"></span>
     </p>
-    <script type="text/javascript" src="test.json"></script>
+    <!-- <script type="text/javascript" src="test.json"></script> -->
+    <script type="text/javascript">
+        var get = $http.get("json_ser.json");
+        get.success(function(data) {
+            window.alert(name);
+        });
+    </script>
     <!-- json数据获取要放在文件最后面，等视图加载好之后在调用相应的json数据 -->
 </body>
 

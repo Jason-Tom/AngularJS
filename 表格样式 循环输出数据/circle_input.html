@@ -9,6 +9,7 @@
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
         <select ng-model="selectedName" ng-options="x for x in names">
+        <!-- 有的模块不能用repeat来代替 -->
         </select>
         <h1 ng-repeat="x in names">{{x}}</h1>
         <table>

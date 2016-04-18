@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!--
+    <script type="text/javascript" src="native_json.json"></script>
+    -->
+</head>
+
+<body>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+    	// $scope.names = 'xxxx';3
+        $http.get("http://tv.kenefe.com/api/v2/series/watches")
+        .then(function(res){
+        	// 读取json数据，通过方法get，放到结果集，在通过结果集读取，数据写好接口
+        	console.info(res);
+        	var result = res.data;
+        	if(result.code == 200)
+        		alert(result.data.title);
+        	else alert(result.message);
+        })
+        /*
+        .success(function(res){
+        	$scope.names = res.data.title;
+        });
+        */
+    });
+    </script>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+    <h1>test</h1>
+        <h1>{{names}}</h1>
+    </div>
+</body>
+
+</html>

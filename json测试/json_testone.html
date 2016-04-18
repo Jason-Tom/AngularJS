@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    
+</head>
 <body>
     <h2>JSON Object Creation in JavaScript</h2>
     <p>
@@ -8,21 +10,9 @@
         <br> Age: <span id="jage"></span>
         <br> Address: <span id="jstreet"></span>
         <br> Phone: <span id="jphone"></span>
-        <br>
     </p>
-    <script>
-    var JSONObject = {
-        "name": "John Johnson",
-        "street": "Oslo West 16",
-        "age": 33,
-        "phone": "555 1234567"
-    };
-    // json对象转换成javascript对象，来进行访问
-    document.getElementById("jname").innerHTML = JSONObject.name
-    document.getElementById("jage").innerHTML = JSONObject.age
-    document.getElementById("jstreet").innerHTML = JSONObject.street
-    document.getElementById("jphone").innerHTML = JSONObject.phone
-    </script>
+    <script type="text/javascript" src="test.json"></script>
+    <!-- json数据获取要放在文件最后面，等视图加载好之后在调用相应的json数据 -->
 </body>
 
 </html>

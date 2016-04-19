@@ -22,4 +22,8 @@
             }]
         }
     }
-    document.getElementById("jname").innerHTML = JSONObject.data.result[0].title
+        var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.names = JSONObject.data.result;
+    });
+    // document.getElementById("jname").innerHTML = JSONObject.data.result[0].title

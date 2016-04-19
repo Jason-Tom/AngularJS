@@ -1,10 +1,25 @@
     var JSONObject = {
         "name": "Bill Gates",
-        "street": "Fifth Avenue New York 666",
-        "age": 56,
-        "phone": "555 1234567"
-    };
-    document.getElementById("jname").innerHTML = JSONObject.name
-    document.getElementById("jage").innerHTML = JSONObject.age
-    document.getElementById("jstreet").innerHTML = JSONObject.street
-    document.getElementById("jphone").innerHTML = JSONObject.phone
+        code: 200,
+        data: {
+            title: "2016-04-19 周二 播出",
+            result: [{
+                source: "zimuzu",
+                title: "十二猴子 (12 Monkeys) S2E1",
+                source_id: "33231",
+                cnname: "十二猴子",
+                enname: "12 Monkeys",
+                season: "2",
+                episode: "1"
+            }, {
+                source: "zimuzu",
+                title: "疯狂前女友 (Crazy Ex-Girlfriend) S1E18",
+                source_id: "33806",
+                cnname: "疯狂前女友",
+                enname: "Crazy Ex-Girlfriend",
+                season: "1",
+                episode: "18"
+            }]
+        }
+    }
+    document.getElementById("jname").innerHTML = JSONObject.code

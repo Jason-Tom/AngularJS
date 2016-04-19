@@ -8,25 +8,8 @@
 
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <select ng-model="selectedName" ng-options="x for x in names">
-            <!-- 有的模块不能用repeat来代替 -->
-        </select>
-        <h1 ng-repeat="x in names">{{x}}</h1>
-        <table>
-            <tr>
-                <td ng-repeat="x in names">
-                    {{x}}
-                </td>
-            </tr>
-        </table>
+        <h1 ng-repeat="x in names">{{x}}</h1></br>
     </div>
-    <!-- repeat的使用，1、指定重复模块 2、指定x显示位置 -->
-<!--     <script>
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope) {
-        $scope.names = ["Google", "Runoob", "Taobao"];
-    });
-    </script> -->
     <script type="text/javascript" src="myjs.js"></script>
 </body>
 

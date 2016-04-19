@@ -1,4 +1,9 @@
-    var JSONObject =  [{
+    var JSONObject = {
+        "name": "Bill Gates",
+        code: 200,
+        data: {
+            title: "2016-04-19 周二 播出",
+            result: [{
                 source: "zimuzu",
                 title: "十二猴子 (12 Monkeys) S2E1",
                 source_id: "33231",
@@ -15,4 +20,6 @@
                 season: "1",
                 episode: "18"
             }]
-    document.getElementById("jname").innerHTML = JSONObject[0].source
+        }
+    }
+    document.getElementById("jname").innerHTML = JSONObject.data.title

@@ -22,4 +22,4 @@
             }]
         }
     }
-    document.getElementById("jname").innerHTML = JSONObject.data.title
+    document.getElementById("jname").innerHTML = JSONObject.data.result[0].title

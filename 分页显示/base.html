@@ -1,23 +1,18 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script type="text/javascript" src="angular.min.js"></script>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
     <script type="text/javascript" src="myjs.js"></script>
 </head>
 
 <body>
-    <h2>在 JavaScript 中创建 JSON 对象，获取json数据</h2>
-    <p>
-        Name: <span id="jname"></span>
-        <br /> Age: <span id="jage"></span>
-        <br /> Address: <span id="jstreet"></span>
-        <br /> Phone: <span id="jphone"></span>
-        <br />
-    </p>
-    <script type="text/javascript" src="myjs.js"></script>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+        <div ng-repeat="x in data">
+            <h1>{{x.title}}</h1>
+        </div>
+    </div>
 </body>
 
 </html>

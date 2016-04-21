@@ -114,7 +114,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../分页显示" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../APTS/WebRoot/pages" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
@@ -196,12 +196,12 @@
       <workItem from="1461065771302" duration="1016000" />
       <workItem from="1461078800460" duration="83000" />
       <workItem from="1461121974931" duration="296000" />
-      <workItem from="1461122618594" duration="167000" />
+      <workItem from="1461122618594" duration="486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8422000" />
+    <option name="totallyTimeSpent" value="8741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
